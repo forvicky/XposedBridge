@@ -26,23 +26,23 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.WeakHashMap;
 
-import de.robv.android.xposed.IXposedHookZygoteInit;
-import de.robv.android.xposed.XC_MethodHook;
-import de.robv.android.xposed.XC_MethodHook.MethodHookParam;
-import de.robv.android.xposed.XposedBridge;
-import de.robv.android.xposed.XposedBridge.CopyOnWriteSortedSet;
-import de.robv.android.xposed.callbacks.XC_LayoutInflated;
-import de.robv.android.xposed.callbacks.XC_LayoutInflated.LayoutInflatedParam;
-import de.robv.android.xposed.callbacks.XCallback;
+import de.robv.android.xppsed.IXposedHookZygoteInit;
+import de.robv.android.xppsed.XC_MethodHook;
+import de.robv.android.xppsed.XC_MethodHook.MethodHookParam;
+import de.robv.android.xppsed.XposedBridge;
+import de.robv.android.xppsed.XposedBridge.CopyOnWriteSortedSet;
+import de.robv.android.xppsed.callbacks.XC_LayoutInflated;
+import de.robv.android.xppsed.callbacks.XC_LayoutInflated.LayoutInflatedParam;
+import de.robv.android.xppsed.callbacks.XCallback;
 import xposed.dummy.XResourcesSuperClass;
 import xposed.dummy.XTypedArraySuperClass;
 
-import static de.robv.android.xposed.XposedHelpers.decrementMethodDepth;
-import static de.robv.android.xposed.XposedHelpers.findAndHookMethod;
-import static de.robv.android.xposed.XposedHelpers.getIntField;
-import static de.robv.android.xposed.XposedHelpers.getLongField;
-import static de.robv.android.xposed.XposedHelpers.getObjectField;
-import static de.robv.android.xposed.XposedHelpers.incrementMethodDepth;
+import static de.robv.android.xppsed.XposedHelpers.decrementMethodDepth;
+import static de.robv.android.xppsed.XposedHelpers.findAndHookMethod;
+import static de.robv.android.xppsed.XposedHelpers.getIntField;
+import static de.robv.android.xppsed.XposedHelpers.getLongField;
+import static de.robv.android.xppsed.XposedHelpers.getObjectField;
+import static de.robv.android.xppsed.XposedHelpers.incrementMethodDepth;
 
 /**
  * {@link android.content.res.Resources} subclass that allows replacing individual resources.

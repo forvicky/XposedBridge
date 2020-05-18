@@ -12,7 +12,7 @@ v81:
   deprecated full-name variants of XResources.hookLayout() etc.
   removed several other unhooking methods, use IXUnhook instead
   removed XC_LoadPackage / XC_InitPackageResources constructors
-  removed class de.robv.android.xposed.IXposedHookCmdInit
+  removed class de.robv.android.xppsed.IXposedHookCmdInit
 
 v65:
   added XposedBridge.getXposedVersion()
@@ -25,9 +25,9 @@ v63:
 
 v60:
   added IXposedHookZygoteInit.StartupParam.startsSystemServer
-  added class de.robv.android.xposed.SELinuxHelper
-  added class de.robv.android.xposed.services.BaseService
-  added class de.robv.android.xposed.services.FileResult
+  added class de.robv.android.xppsed.SELinuxHelper
+  added class de.robv.android.xppsed.services.BaseService
+  added class de.robv.android.xppsed.services.FileResult
 
 v53:
   added XSharedPreferences.getFile()
@@ -37,7 +37,7 @@ v52:
   added XResources.getPackageNameDuringConstruction()
 
 v51:
-  deprecated class de.robv.android.xposed.IXposedHookCmdInit (removed in v81)
+  deprecated class de.robv.android.xppsed.IXposedHookCmdInit (removed in v81)
   added XposedHelpers.findAndHookConstructor()
   added XposedHelpers.findConstructorExact() variants
 

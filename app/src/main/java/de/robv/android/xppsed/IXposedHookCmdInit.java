@@ -1,4 +1,4 @@
-package de.robv.android.xposed;
+package de.robv.android.xppsed;
 
 
 /**

@@ -1,9 +1,9 @@
-package de.robv.android.xposed.callbacks;
+package de.robv.android.xppsed.callbacks;
 
 import android.content.pm.ApplicationInfo;
 
-import de.robv.android.xposed.IXposedHookLoadPackage;
-import de.robv.android.xposed.XposedBridge.CopyOnWriteSortedSet;
+import de.robv.android.xppsed.IXposedHookLoadPackage;
+import de.robv.android.xppsed.XposedBridge.CopyOnWriteSortedSet;
 
 /**
  * This class is only used for internal purposes, except for the {@link LoadPackageParam}

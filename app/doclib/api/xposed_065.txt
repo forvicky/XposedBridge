@@ -31,19 +31,19 @@ package android.content.res {
     method public static int getFakeResId(android.content.res.Resources, int);
     method public java.lang.String getPackageName();
     method public static java.lang.String getPackageNameDuringConstruction();
-    method public de.robv.android.xposed.callbacks.XC_LayoutInflated.Unhook hookLayout(int, de.robv.android.xposed.callbacks.XC_LayoutInflated);
-    method public de.robv.android.xposed.callbacks.XC_LayoutInflated.Unhook hookLayout(java.lang.String, de.robv.android.xposed.callbacks.XC_LayoutInflated);
-    method public de.robv.android.xposed.callbacks.XC_LayoutInflated.Unhook hookLayout(java.lang.String, java.lang.String, java.lang.String, de.robv.android.xposed.callbacks.XC_LayoutInflated);
-    method public static de.robv.android.xposed.callbacks.XC_LayoutInflated.Unhook hookSystemWideLayout(int, de.robv.android.xposed.callbacks.XC_LayoutInflated);
-    method public static de.robv.android.xposed.callbacks.XC_LayoutInflated.Unhook hookSystemWideLayout(java.lang.String, de.robv.android.xposed.callbacks.XC_LayoutInflated);
-    method public static de.robv.android.xposed.callbacks.XC_LayoutInflated.Unhook hookSystemWideLayout(java.lang.String, java.lang.String, java.lang.String, de.robv.android.xposed.callbacks.XC_LayoutInflated);
+    method public de.robv.android.xppsed.callbacks.XC_LayoutInflated.Unhook hookLayout(int, de.robv.android.xppsed.callbacks.XC_LayoutInflated);
+    method public de.robv.android.xppsed.callbacks.XC_LayoutInflated.Unhook hookLayout(java.lang.String, de.robv.android.xppsed.callbacks.XC_LayoutInflated);
+    method public de.robv.android.xppsed.callbacks.XC_LayoutInflated.Unhook hookLayout(java.lang.String, java.lang.String, java.lang.String, de.robv.android.xppsed.callbacks.XC_LayoutInflated);
+    method public static de.robv.android.xppsed.callbacks.XC_LayoutInflated.Unhook hookSystemWideLayout(int, de.robv.android.xppsed.callbacks.XC_LayoutInflated);
+    method public static de.robv.android.xppsed.callbacks.XC_LayoutInflated.Unhook hookSystemWideLayout(java.lang.String, de.robv.android.xppsed.callbacks.XC_LayoutInflated);
+    method public static de.robv.android.xppsed.callbacks.XC_LayoutInflated.Unhook hookSystemWideLayout(java.lang.String, java.lang.String, java.lang.String, de.robv.android.xppsed.callbacks.XC_LayoutInflated);
     method public void setReplacement(int, java.lang.Object);
     method public void setReplacement(java.lang.String, java.lang.Object);
     method public void setReplacement(java.lang.String, java.lang.String, java.lang.String, java.lang.Object);
     method public static void setSystemWideReplacement(int, java.lang.Object);
     method public static void setSystemWideReplacement(java.lang.String, java.lang.Object);
     method public static void setSystemWideReplacement(java.lang.String, java.lang.String, java.lang.String, java.lang.Object);
-    method public static void unhookLayout(java.lang.String, int, de.robv.android.xposed.callbacks.XC_LayoutInflated);
+    method public static void unhookLayout(java.lang.String, int, de.robv.android.xppsed.callbacks.XC_LayoutInflated);
   }
 
   public static class XResources.DimensionReplacement {
@@ -70,10 +70,10 @@ package android.content.res {
 
 }
 
-package de.robv.android.xposed {
+package de.robv.android.xppsed {
 
   public abstract deprecated interface IXposedHookCmdInit {
-    method public abstract void initCmdApp(de.robv.android.xposed.IXposedHookCmdInit.StartupParam) throws java.lang.Throwable;
+    method public abstract void initCmdApp(de.robv.android.xppsed.IXposedHookCmdInit.StartupParam) throws java.lang.Throwable;
   }
 
   public static final class IXposedHookCmdInit.StartupParam {
@@ -82,15 +82,15 @@ package de.robv.android.xposed {
   }
 
   public abstract interface IXposedHookInitPackageResources {
-    method public abstract void handleInitPackageResources(de.robv.android.xposed.callbacks.XC_InitPackageResources.InitPackageResourcesParam) throws java.lang.Throwable;
+    method public abstract void handleInitPackageResources(de.robv.android.xppsed.callbacks.XC_InitPackageResources.InitPackageResourcesParam) throws java.lang.Throwable;
   }
 
   public abstract interface IXposedHookLoadPackage {
-    method public abstract void handleLoadPackage(de.robv.android.xposed.callbacks.XC_LoadPackage.LoadPackageParam) throws java.lang.Throwable;
+    method public abstract void handleLoadPackage(de.robv.android.xppsed.callbacks.XC_LoadPackage.LoadPackageParam) throws java.lang.Throwable;
   }
 
   public abstract interface IXposedHookZygoteInit {
-    method public abstract void initZygote(de.robv.android.xposed.IXposedHookZygoteInit.StartupParam) throws java.lang.Throwable;
+    method public abstract void initZygote(de.robv.android.xppsed.IXposedHookZygoteInit.StartupParam) throws java.lang.Throwable;
   }
 
   public static final class IXposedHookZygoteInit.StartupParam {
@@ -99,20 +99,20 @@ package de.robv.android.xposed {
   }
 
   public final class SELinuxHelper {
-    method public static de.robv.android.xposed.services.BaseService getAppDataFileService();
+    method public static de.robv.android.xppsed.services.BaseService getAppDataFileService();
     method public static java.lang.String getContext();
     method public static boolean isSELinuxEnabled();
     method public static boolean isSELinuxEnforced();
   }
 
-  public abstract class XC_MethodHook extends de.robv.android.xposed.callbacks.XCallback {
+  public abstract class XC_MethodHook extends de.robv.android.xppsed.callbacks.XCallback {
     ctor public XC_MethodHook();
     ctor public XC_MethodHook(int);
-    method protected void afterHookedMethod(de.robv.android.xposed.XC_MethodHook.MethodHookParam) throws java.lang.Throwable;
-    method protected void beforeHookedMethod(de.robv.android.xposed.XC_MethodHook.MethodHookParam) throws java.lang.Throwable;
+    method protected void afterHookedMethod(de.robv.android.xppsed.XC_MethodHook.MethodHookParam) throws java.lang.Throwable;
+    method protected void beforeHookedMethod(de.robv.android.xppsed.XC_MethodHook.MethodHookParam) throws java.lang.Throwable;
   }
 
-  public static final class XC_MethodHook.MethodHookParam extends de.robv.android.xposed.callbacks.XCallback.Param {
+  public static final class XC_MethodHook.MethodHookParam extends de.robv.android.xppsed.callbacks.XCallback.Param {
     method public java.lang.Object getResult();
     method public java.lang.Object getResultOrThrowable() throws java.lang.Throwable;
     method public java.lang.Throwable getThrowable();
@@ -124,19 +124,19 @@ package de.robv.android.xposed {
     field public java.lang.Object thisObject;
   }
 
-  public class XC_MethodHook.Unhook implements de.robv.android.xposed.callbacks.IXUnhook {
-    method public de.robv.android.xposed.XC_MethodHook getCallback();
+  public class XC_MethodHook.Unhook implements de.robv.android.xppsed.callbacks.IXUnhook {
+    method public de.robv.android.xppsed.XC_MethodHook getCallback();
     method public java.lang.reflect.Member getHookedMethod();
     method public void unhook();
   }
 
-  public abstract class XC_MethodReplacement extends de.robv.android.xposed.XC_MethodHook {
+  public abstract class XC_MethodReplacement extends de.robv.android.xppsed.XC_MethodHook {
     ctor public XC_MethodReplacement();
     ctor public XC_MethodReplacement(int);
-    method protected abstract java.lang.Object replaceHookedMethod(de.robv.android.xposed.XC_MethodHook.MethodHookParam) throws java.lang.Throwable;
-    method public static de.robv.android.xposed.XC_MethodReplacement returnConstant(java.lang.Object);
-    method public static de.robv.android.xposed.XC_MethodReplacement returnConstant(int, java.lang.Object);
-    field public static final de.robv.android.xposed.XC_MethodReplacement DO_NOTHING;
+    method protected abstract java.lang.Object replaceHookedMethod(de.robv.android.xppsed.XC_MethodHook.MethodHookParam) throws java.lang.Throwable;
+    method public static de.robv.android.xppsed.XC_MethodReplacement returnConstant(java.lang.Object);
+    method public static de.robv.android.xppsed.XC_MethodReplacement returnConstant(int, java.lang.Object);
+    field public static final de.robv.android.xppsed.XC_MethodReplacement DO_NOTHING;
   }
 
   public final class XSharedPreferences implements android.content.SharedPreferences {
@@ -162,17 +162,17 @@ package de.robv.android.xposed {
 
   public final class XposedBridge {
     method public static int getXposedVersion();
-    method public static java.util.Set<de.robv.android.xposed.XC_MethodHook.Unhook> hookAllConstructors(java.lang.Class<?>, de.robv.android.xposed.XC_MethodHook);
-    method public static java.util.Set<de.robv.android.xposed.XC_MethodHook.Unhook> hookAllMethods(java.lang.Class<?>, java.lang.String, de.robv.android.xposed.XC_MethodHook);
-    method public static de.robv.android.xposed.callbacks.XC_InitPackageResources.Unhook hookInitPackageResources(de.robv.android.xposed.callbacks.XC_InitPackageResources);
-    method public static de.robv.android.xposed.callbacks.XC_LoadPackage.Unhook hookLoadPackage(de.robv.android.xposed.callbacks.XC_LoadPackage);
-    method public static de.robv.android.xposed.XC_MethodHook.Unhook hookMethod(java.lang.reflect.Member, de.robv.android.xposed.XC_MethodHook);
+    method public static java.util.Set<de.robv.android.xppsed.XC_MethodHook.Unhook> hookAllConstructors(java.lang.Class<?>, de.robv.android.xppsed.XC_MethodHook);
+    method public static java.util.Set<de.robv.android.xppsed.XC_MethodHook.Unhook> hookAllMethods(java.lang.Class<?>, java.lang.String, de.robv.android.xppsed.XC_MethodHook);
+    method public static de.robv.android.xppsed.callbacks.XC_InitPackageResources.Unhook hookInitPackageResources(de.robv.android.xppsed.callbacks.XC_InitPackageResources);
+    method public static de.robv.android.xppsed.callbacks.XC_LoadPackage.Unhook hookLoadPackage(de.robv.android.xppsed.callbacks.XC_LoadPackage);
+    method public static de.robv.android.xppsed.XC_MethodHook.Unhook hookMethod(java.lang.reflect.Member, de.robv.android.xppsed.XC_MethodHook);
     method public static java.lang.Object invokeOriginalMethod(java.lang.reflect.Member, java.lang.Object, java.lang.Object[]) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException, java.lang.reflect.InvocationTargetException, java.lang.NullPointerException;
     method public static synchronized void log(java.lang.String);
     method public static synchronized void log(java.lang.Throwable);
-    method public static void unhookInitPackageResources(de.robv.android.xposed.callbacks.XC_InitPackageResources);
-    method public static void unhookLoadPackage(de.robv.android.xposed.callbacks.XC_LoadPackage);
-    method public static void unhookMethod(java.lang.reflect.Member, de.robv.android.xposed.XC_MethodHook);
+    method public static void unhookInitPackageResources(de.robv.android.xppsed.callbacks.XC_InitPackageResources);
+    method public static void unhookLoadPackage(de.robv.android.xppsed.callbacks.XC_LoadPackage);
+    method public static void unhookMethod(java.lang.reflect.Member, de.robv.android.xppsed.XC_MethodHook);
     field public static final java.lang.ClassLoader BOOTCLASSLOADER;
     field public static deprecated int XPOSED_BRIDGE_VERSION;
   }
@@ -184,10 +184,10 @@ package de.robv.android.xposed {
     method public static java.lang.Object callStaticMethod(java.lang.Class<?>, java.lang.String, java.lang.Object...);
     method public static java.lang.Object callStaticMethod(java.lang.Class<?>, java.lang.String, java.lang.Class<?>[], java.lang.Object...);
     method public static int decrementMethodDepth(java.lang.String);
-    method public static de.robv.android.xposed.XC_MethodHook.Unhook findAndHookConstructor(java.lang.Class<?>, java.lang.Object...);
-    method public static de.robv.android.xposed.XC_MethodHook.Unhook findAndHookConstructor(java.lang.String, java.lang.ClassLoader, java.lang.Object...);
-    method public static de.robv.android.xposed.XC_MethodHook.Unhook findAndHookMethod(java.lang.Class<?>, java.lang.String, java.lang.Object...);
-    method public static de.robv.android.xposed.XC_MethodHook.Unhook findAndHookMethod(java.lang.String, java.lang.ClassLoader, java.lang.String, java.lang.Object...);
+    method public static de.robv.android.xppsed.XC_MethodHook.Unhook findAndHookConstructor(java.lang.Class<?>, java.lang.Object...);
+    method public static de.robv.android.xppsed.XC_MethodHook.Unhook findAndHookConstructor(java.lang.String, java.lang.ClassLoader, java.lang.Object...);
+    method public static de.robv.android.xppsed.XC_MethodHook.Unhook findAndHookMethod(java.lang.Class<?>, java.lang.String, java.lang.Object...);
+    method public static de.robv.android.xppsed.XC_MethodHook.Unhook findAndHookMethod(java.lang.String, java.lang.ClassLoader, java.lang.String, java.lang.Object...);
     method public static java.lang.Class<?> findClass(java.lang.String, java.lang.ClassLoader);
     method public static java.lang.reflect.Constructor<?> findConstructorBestMatch(java.lang.Class<?>, java.lang.Class<?>...);
     method public static java.lang.reflect.Constructor<?> findConstructorBestMatch(java.lang.Class<?>, java.lang.Object...);
@@ -267,54 +267,54 @@ package de.robv.android.xposed {
 
 }
 
-package de.robv.android.xposed.callbacks {
+package de.robv.android.xppsed.callbacks {
 
   public abstract interface IXUnhook {
     method public abstract void unhook();
   }
 
-  public abstract class XC_InitPackageResources extends de.robv.android.xposed.callbacks.XCallback {
+  public abstract class XC_InitPackageResources extends de.robv.android.xppsed.callbacks.XCallback {
     ctor public XC_InitPackageResources();
     ctor public XC_InitPackageResources(int);
-    method public abstract void handleInitPackageResources(de.robv.android.xposed.callbacks.XC_InitPackageResources.InitPackageResourcesParam) throws java.lang.Throwable;
+    method public abstract void handleInitPackageResources(de.robv.android.xppsed.callbacks.XC_InitPackageResources.InitPackageResourcesParam) throws java.lang.Throwable;
   }
 
-  public static final class XC_InitPackageResources.InitPackageResourcesParam extends de.robv.android.xposed.callbacks.XCallback.Param {
+  public static final class XC_InitPackageResources.InitPackageResourcesParam extends de.robv.android.xppsed.callbacks.XCallback.Param {
     field public java.lang.String packageName;
     field public android.content.res.XResources res;
   }
 
-  public class XC_InitPackageResources.Unhook implements de.robv.android.xposed.callbacks.IXUnhook {
-    method public de.robv.android.xposed.callbacks.XC_InitPackageResources getCallback();
+  public class XC_InitPackageResources.Unhook implements de.robv.android.xppsed.callbacks.IXUnhook {
+    method public de.robv.android.xppsed.callbacks.XC_InitPackageResources getCallback();
     method public void unhook();
   }
 
-  public abstract class XC_LayoutInflated extends de.robv.android.xposed.callbacks.XCallback {
+  public abstract class XC_LayoutInflated extends de.robv.android.xppsed.callbacks.XCallback {
     ctor public XC_LayoutInflated();
     ctor public XC_LayoutInflated(int);
-    method public abstract void handleLayoutInflated(de.robv.android.xposed.callbacks.XC_LayoutInflated.LayoutInflatedParam) throws java.lang.Throwable;
+    method public abstract void handleLayoutInflated(de.robv.android.xppsed.callbacks.XC_LayoutInflated.LayoutInflatedParam) throws java.lang.Throwable;
   }
 
-  public static final class XC_LayoutInflated.LayoutInflatedParam extends de.robv.android.xposed.callbacks.XCallback.Param {
+  public static final class XC_LayoutInflated.LayoutInflatedParam extends de.robv.android.xppsed.callbacks.XCallback.Param {
     field public android.content.res.XResources res;
     field public android.content.res.XResources.ResourceNames resNames;
     field public java.lang.String variant;
     field public android.view.View view;
   }
 
-  public class XC_LayoutInflated.Unhook implements de.robv.android.xposed.callbacks.IXUnhook {
-    method public de.robv.android.xposed.callbacks.XC_LayoutInflated getCallback();
+  public class XC_LayoutInflated.Unhook implements de.robv.android.xppsed.callbacks.IXUnhook {
+    method public de.robv.android.xppsed.callbacks.XC_LayoutInflated getCallback();
     method public int getId();
     method public void unhook();
   }
 
-  public abstract class XC_LoadPackage extends de.robv.android.xposed.callbacks.XCallback {
+  public abstract class XC_LoadPackage extends de.robv.android.xppsed.callbacks.XCallback {
     ctor public XC_LoadPackage();
     ctor public XC_LoadPackage(int);
-    method public abstract void handleLoadPackage(de.robv.android.xposed.callbacks.XC_LoadPackage.LoadPackageParam) throws java.lang.Throwable;
+    method public abstract void handleLoadPackage(de.robv.android.xppsed.callbacks.XC_LoadPackage.LoadPackageParam) throws java.lang.Throwable;
   }
 
-  public static final class XC_LoadPackage.LoadPackageParam extends de.robv.android.xposed.callbacks.XCallback.Param {
+  public static final class XC_LoadPackage.LoadPackageParam extends de.robv.android.xppsed.callbacks.XCallback.Param {
     field public android.content.pm.ApplicationInfo appInfo;
     field public java.lang.ClassLoader classLoader;
     field public boolean isFirstApplication;
@@ -322,8 +322,8 @@ package de.robv.android.xposed.callbacks {
     field public java.lang.String processName;
   }
 
-  public class XC_LoadPackage.Unhook implements de.robv.android.xposed.callbacks.IXUnhook {
-    method public de.robv.android.xposed.callbacks.XC_LoadPackage getCallback();
+  public class XC_LoadPackage.Unhook implements de.robv.android.xppsed.callbacks.IXUnhook {
+    method public de.robv.android.xppsed.callbacks.XC_LoadPackage getCallback();
     method public void unhook();
   }
 
@@ -344,20 +344,20 @@ package de.robv.android.xposed.callbacks {
 
 }
 
-package de.robv.android.xposed.services {
+package de.robv.android.xppsed.services {
 
   public abstract class BaseService {
     method public abstract boolean checkFileAccess(java.lang.String, int);
     method public boolean checkFileExists(java.lang.String);
     method public java.io.InputStream getFileInputStream(java.lang.String) throws java.io.IOException;
-    method public de.robv.android.xposed.services.FileResult getFileInputStream(java.lang.String, long, long) throws java.io.IOException;
+    method public de.robv.android.xppsed.services.FileResult getFileInputStream(java.lang.String, long, long) throws java.io.IOException;
     method public long getFileModificationTime(java.lang.String) throws java.io.IOException;
     method public long getFileSize(java.lang.String) throws java.io.IOException;
     method public boolean hasDirectFileAccess();
     method public abstract byte[] readFile(java.lang.String) throws java.io.IOException;
-    method public abstract de.robv.android.xposed.services.FileResult readFile(java.lang.String, long, long) throws java.io.IOException;
-    method public abstract de.robv.android.xposed.services.FileResult readFile(java.lang.String, int, int, long, long) throws java.io.IOException;
-    method public abstract de.robv.android.xposed.services.FileResult statFile(java.lang.String) throws java.io.IOException;
+    method public abstract de.robv.android.xppsed.services.FileResult readFile(java.lang.String, long, long) throws java.io.IOException;
+    method public abstract de.robv.android.xppsed.services.FileResult readFile(java.lang.String, int, int, long, long) throws java.io.IOException;
+    method public abstract de.robv.android.xppsed.services.FileResult statFile(java.lang.String) throws java.io.IOException;
     field public static final int F_OK = 0; // 0x0
     field public static final int R_OK = 4; // 0x4
     field public static final int W_OK = 2; // 0x2

@@ -1,9 +1,9 @@
-package de.robv.android.xposed;
+package de.robv.android.xppsed;
 
 import android.content.res.XResources;
 
-import de.robv.android.xposed.callbacks.XC_InitPackageResources;
-import de.robv.android.xposed.callbacks.XC_InitPackageResources.InitPackageResourcesParam;
+import de.robv.android.xppsed.callbacks.XC_InitPackageResources;
+import de.robv.android.xppsed.callbacks.XC_InitPackageResources.InitPackageResourcesParam;
 
 /**
  * Get notified when the resources for an app are initialized.

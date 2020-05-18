@@ -1,4 +1,4 @@
-package de.robv.android.xposed.services;
+package de.robv.android.xppsed.services;
 
 import java.io.InputStream;
 

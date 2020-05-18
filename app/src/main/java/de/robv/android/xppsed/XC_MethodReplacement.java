@@ -1,6 +1,6 @@
-package de.robv.android.xposed;
+package de.robv.android.xppsed;
 
-import de.robv.android.xposed.callbacks.XCallback;
+import de.robv.android.xppsed.callbacks.XCallback;
 
 /**
  * A special case of {@link XC_MethodHook} which completely replaces the original method.
